@@ -1,0 +1,30 @@
+{
+  "$anchor": "reaction-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+
+        "_reaction": {
+          "type": "object",
+          "title": "Reaction",
+          "default": {},
+          "required": [
+          ],
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable Reaction",
+              "description": "Controls whether the reaction extension is enabled or disabled",
+              "default": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

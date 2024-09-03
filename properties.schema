@@ -1,0 +1,240 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "required": false,
+    "globals": {
+        "_navOrder": {
+            "type": "number",
+            "required": true,
+            "title": "Navigation bar order",
+            "help": "Determines the order in which the button is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
+            "default": 99,
+            "inputType": "Text"
+        },
+        "_showLabel": {
+            "type": "boolean",
+            "required": true,
+            "default": true,
+            "title": "Enable navigation bar button label",
+            "inputType": "Checkbox",
+            "help": "Controls whether a label is shown on the navigation bar button."
+        },
+        "navLabel": {
+            "type": "string",
+            "required": true,
+            "default": "Feedback",
+            "title": "Navigation bar button label",
+            "inputType": "Text",
+            "translatable": true
+        },
+        "_navTooltip": {
+            "type": "object",
+            "title": "Navigation tooltip",
+            "properties": {
+                "_isEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "title": "Enable tooltip for navigation button",
+                    "inputType": "Checkbox",
+                    "validators": []
+                },
+                "text": {
+                    "type": "string",
+                    "title": "Text",
+                    "default": "Feedback",
+                    "help": "The tooltip text to display on hover over this item",
+                    "inputType": "Text",
+                    "validators": [],
+                    "translatable": true
+                }
+            }
+        }
+    },
+    "properties": {
+        "pluginLocations": {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "config": {
+                    "type": "object"
+                },
+                "course": {
+                    "type": "object",
+                    "properties": {
+                        "_reaction": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Reaction",
+                            "properties": {
+                                "_isEnabled": {
+                                    "type": "boolean",
+                                    "required": true,
+                                    "default": true,
+                                    "title": "Enable Reaction",
+                                    "inputType": "Checkbox",
+                                    "validators": [],
+                                    "help": "Controls whether the reaction extension is enabled or disabled."
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "Feedback",
+                                    "title": "Title",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "translatable": true
+                                },
+                                "body": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "Please provide feedback on this course.",
+                                    "title": "Body",
+                                    "inputType": "TextArea",
+                                    "validators": [],
+                                    "translatable": true
+                                },
+                                "instruction": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": "",
+                                    "title": "Instruction",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "translatable": true
+                                },
+                                "placeholder": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": "Type your feedback here...",
+                                    "title": "Placeholder",
+                                    "inputType": "Text",
+                                    "validators": [],
+                                    "translatable": true
+                                },
+                                "thankYou": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": "Thank you for your feedback.",
+                                    "title": "Thank you message",
+                                    "inputType": "TextArea",
+                                    "validators": [],
+                                    "translatable": true
+                                },
+                                "trackUser": {
+                                    "type": "boolean",
+                                    "required": true,
+                                    "default": true,
+                                    "title": "Track user",
+                                    "inputType": "Checkbox",
+                                    "validators": [],
+                                    "help": "Controls whether the user are tracked when feedback is submitted."
+                                },
+                                "_items": {
+                                    "type": "array",
+                                    "required": true,
+                                    "title": "Rating Items",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "label": {
+                                                "type": "string",
+                                                "required": true,
+                                                "default": "",
+                                                "title": "Label",
+                                                "inputType": "Text",
+                                                "validators": [],
+                                                "translatable": true
+                                            },
+                                            "value": {
+                                                "type": "number",
+                                                "required": true,
+                                                "default": 0,
+                                                "title": "Value",
+                                                "inputType": "Number",
+                                                "validators": [
+                                                    "number"
+                                                ]
+                                            },
+                                            "icon": {
+                                                "type": "string",
+                                                "required": false,
+                                                "default": "",
+                                                "title": "Icon",
+                                                "inputType": "Text",
+                                                "validators": []
+                                            }
+                                        }
+                                    }
+                                },
+                                "_buttons": {
+                                    "type": "object",
+                                    "properties": {
+                                        "_submit": {
+                                            "type": "object",
+                                            "properties": {
+                                                "buttonText": {
+                                                    "type": "string",
+                                                    "required": true,
+                                                    "default": "Submit",
+                                                    "title": "Text",
+                                                    "inputType": "Text",
+                                                    "validators": [],
+                                                    "translatable": true
+                                                },
+                                                "ariaLabel": {
+                                                    "type": "string",
+                                                    "required": false,
+                                                    "default": "",
+                                                    "title": "Aria Label",
+                                                    "inputType": "Text",
+                                                    "validators": [],
+                                                    "translatable": true
+                                                }
+                                            }
+                                        },
+                                        "_cancel": {
+                                            "type": "object",
+                                            "properties": {
+                                                "buttonText": {
+                                                    "type": "string",
+                                                    "required": true,
+                                                    "default": "Cancel",
+                                                    "title": "Text",
+                                                    "inputType": "Text",
+                                                    "validators": [],
+                                                    "translatable": true
+                                                },
+                                                "ariaLabel": {
+                                                    "type": "string",
+                                                    "required": false,
+                                                    "default": "",
+                                                    "title": "Aria Label",
+                                                    "inputType": "Text",
+                                                    "validators": [],
+                                                    "translatable": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "contentobject": {
+                    "type": "object"
+                },
+                "article": {
+                    "type": "object"
+                },
+                "block": {
+                    "type": "object"
+                },
+                "component": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

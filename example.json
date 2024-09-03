@@ -1,0 +1,47 @@
+    // course.json
+"_reaction": {
+    "_isEnabled": true,
+    "title": "Feedback",
+    "body": "We'd love to hear your thoughts on this course.",
+    "instruction": "Please provide your feedback below.",
+    "placeholder": "Your feedback",
+    "thankYou": "Thank you for your feedback.",
+    "trackUser": true,
+    "_items": [
+      {
+        "value": 1,
+        "icon": "icon-emotion-very-unhappy",
+        "label": "Lo detesto"
+      },
+      {
+        "value": 2,
+        "icon": "icon-emotion-sad",
+        "label": "No me gusta"
+      },
+      {
+        "value": 3,
+        "icon": "icon-emotion-ok",
+        "label": "Está bien"
+      },
+      {
+        "value": 4,
+        "icon": "icon-emotion-happy",
+        "label": "Me gusta"
+      },
+      {
+        "value": 5,
+        "icon": "icon-emotion-very-happy",
+        "label": "Me encanta"
+      }
+    ],
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your feedback."
+      },
+      "_cancel": {
+        "buttonText": "Cancel",
+        "ariaLabel": "Select here to cancel your feedback."
+      }
+    }
+  }

@@ -1,0 +1,18 @@
+{
+  "name": "adapt-reaction",
+  "version": "1.0.0",
+  "framework": ">=5.31.11",
+  "homepage": "",
+  "bugs": "",
+  "extension": "reaction",
+  "displayName": "Reaction",
+  "description": "An extension that allows learners to provide feedback on a course.",
+  "main": "/js/adapt-reaction.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_reaction",
+  "private": true
+}
