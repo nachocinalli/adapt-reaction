@@ -24,6 +24,7 @@ class Reaction extends Backbone.Controller {
 
   setupEventListeners() {
     this.listenTo(Adapt, {
+      remove: this.remove,
       'router:contentObject': this.onContentObject
     });
   }
@@ -31,7 +32,7 @@ class Reaction extends Backbone.Controller {
   onContentObject(pageModel) {
     const contentObjectModel = pageModel.get('_reaction');
     if (contentObjectModel?._isEnabled === false) return;
-
+    if ($('.nav__navigationreaction').length) return;
     const { _navOrder = 100, _showLabel = true, navLabel = '', _navTooltip = {} } = Reaction.globalsConfig ?? {};
     const model = new NavigationButtonModel({
       _id: 'navigationreaction',
@@ -50,6 +51,10 @@ class Reaction extends Backbone.Controller {
         model
       })
     );
+  }
+
+  remove() {
+    $('.nav__navigationreaction').remove();
   }
 }
 
